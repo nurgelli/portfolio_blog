@@ -9,4 +9,8 @@ class Job_list(ListView):
     queryset = Job.objects.all()
     template_name = 'job/job_list.html'
     
+class Job_detail(DetailView):
+    model = Job
+    template_name = 'job/job_detail.html'
+    
 

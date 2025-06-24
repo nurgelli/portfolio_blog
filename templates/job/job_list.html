@@ -1,3 +1,7 @@
-{% for job in object_list %}
-{{ job.name }}
-{% endfor %}
+<ul>
+    {% for job in object_list %}
+    <li>
+       <a href="{% url 'job:detail' job.id %}">{{ job.name }}</a>
+    </li> 
+    {% endfor %}
+</ul>
