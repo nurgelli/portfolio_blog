@@ -1,0 +1,11 @@
+
+<a href="{% url 'about:list' %}">Return to all projects</a>
+<hr>
+<p>{{project.name}}</p>
+<p>{{project.technologies}}</p>
+<p>{{project.image}}</p>
+<form method="POST" action="{% url "about:delete" project.id %}">
+    {% csrf_token %}
+    <button type='submit'>Delete</button>
+    <button><a href="{% url 'about:update' project.id%}">Edit</a></button>
+</form>

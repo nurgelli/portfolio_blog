@@ -1,0 +1,11 @@
+
+<p><a href="{% url 'about:create' %}">Create project</a></p>
+<ul>
+    {% for project in projects%}
+    <li>
+        <a href="{% url 'about:detail' project.id %}">{{project.name}}</a>
+        {% comment %} <a href="{% url 'about:update' project.id %}">Edit</a> {% endcomment %}
+    </li>
+    
+    {% endfor%}
+</ul>
