@@ -1,0 +1,8 @@
+
+<p>{{tech.name}}</p>
+<a href="{% url 'tech:update' tech.id %}">Update</a>
+<a href="{% url 'tech:list' %}">To all list</a>
+<form method="POST" action="{% url 'tech:delete' tech.id %}">
+    {% csrf_token %}
+<button type="submit">Delete</button>
+</form>

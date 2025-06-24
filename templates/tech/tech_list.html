@@ -1,0 +1,10 @@
+<a href="{% url 'tech:create' %}">Create Tech</a>
+<ul>
+    
+    {% for tech in techs %}
+    <li> 
+        <a href="{% url 'tech:detail' tech.id %}"> {{ tech.name }}</a>
+    </li>
+        {% endfor %}
+    
+</ul>
