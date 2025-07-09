@@ -21,5 +21,5 @@ class Location(models.Model):
     ], default='Ashgabat', null=False, blank=False)
     
     def __str__(self):
-        return f'{self.location} > {self.job.title}'
+        return f'{self.location} > {self.job.title} > {self.job.description} '
 
