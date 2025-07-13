@@ -22,4 +22,3 @@ class Location(models.Model):
     
     def __str__(self):
         return f'{self.location} > {self.job.title} > {self.job.description} '
-
